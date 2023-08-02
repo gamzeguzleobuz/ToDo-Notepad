@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header bg-dark text-white">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">ToDo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="offcanvasBody">
+        </div>
+      </div>
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid justify-content-start">
+          <button class="btn btn-primary me-2 d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+                <i class="fa-solid fa-bars"></i>
+          </button>
+          <span class="navbar-brand mb-0 h1">ToDo List</span>
+        </div>
+      </nav>
+
+
+    <div class="container-md mt-3 flex-fill">
+        <div class="row h-100">
+            <div id="leftColumn" class="d-none d-md-block col-md-4 col-lg-3"> 
+                <div id="leftPart">
+                    <div class="d-flex justify-content-end">
+                        <button id="btnNew" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="New Note">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                        <div id="lstNotes" class="list-group mt-2 mb-3"></div>    
+                </div>
+            </div>
+
+
+            <div class="col-md-8 col-lg-9">
+                    <form id="frmNote" class="h-100 d-flex flex-column">
+                        <div class="mb-2">
+                            <input id="txtTitle" type="text" class="form-control" placeholder="Title" required>
+                        </div>
+                        <div class="mb-2 flex-fill">
+                            <textarea id="txtContent" class="form-control h-100" rows="10" placeholder="Content"></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <button id="btnSave" type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Save" data-bs-placement="bottom">
+                                <i class="fa-solid fa-floppy-disk"></i>
+                            </button>
+                             <button id="btnDelete" type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-title="Delete" data-bs-placement="bottom">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js" integrity="sha512-ToL6UYWePxjhDQKNioSi4AyJ5KkRxY+F1+Fi7Jgh0Hp5Kk2/s8FD7zusJDdonfe5B00Qw+B8taXxF6CFLnqNCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="site.js"></script>
+
+</body>
+</html>
+
+
